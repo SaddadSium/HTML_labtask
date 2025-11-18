@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Form</title>
+  </head>
+  <body>
+    <h1>University Online Admission Form</h1>
+    <form action="#" method="post" enctype="multipart/form-data"></form>
+    <fieldset>
+      <legend><strong>Personal Information</strong></legend>
+      <label for="fname">Full Name:</label>
+      <input type="text" id="fname" name="fullname" maxlength="40" required><br><br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required><br><br>
+      <label >Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">   
+      <label for="female">Female</label><br>  
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+      <label for="Nationality">Nationality:</label><br>
+      <select id="Nationality" name="Nationality" required>
+      <option value="">-- Select a country --</option>
+      <option value="BD">Bangladesh</option>
+      <option value="IND">India</option>
+      <option value="PAK">Pakistan</option>
+      <option value="NP">Nepal</option>
+      <option value="JP">Japan</option>
+      <option value="OT">Other</option>
+      </select><br><br>
+      <label for="Bgrp">Blood Group:</label><br>
+      <select id="Bgrp" name="Bgrp" required>
+      <option value="">-- Select Blood Group --</option>
+      <option value="a+">A+</option>
+      <option value="b+">B+</option>
+      <option value="a-">A-</option>
+      <option value="ab+">AB+</option>
+      <option value="o+">O+</option>
+      <option value="ab-">AB-</option>
+      <option value="o-">O-</option>
+      </select><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" maxlength="200" required><br><br>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" maxlength="100" required><br><br>
+      <label for="econ">Emergency Contact:</label>
+      <input type="text" id="econ" name="EmergencyContact" maxlength="50" required><br><br>
+    </fieldset>
+    <fieldset>
+      <legend><strong>Academic Information</strong></legend>
+      <label for="ssc">SSC (GPA):</label>
+      <input type="text" id="ssc" name="ssc" maxlength="10" required><br><br>
+      <label for="hsc">HSC (GPA):</label>
+      <input type="text" id="hsc" name="hsc" maxlength="10" required><br><br>
+      <label for="interest">Interests:</label><br>
+      <input type="checkbox" name="interest" id="game" value="game">
+      <label for="game">Gaming</label><br>
+      <input type="checkbox" name="interest" id="reading" value="reading">
+      <label for="reading">Reading</label><br>
+      <input type="checkbox" name="interest" id="traveling" value="traveling">
+      <label for="traveling">Traveling</label><br>
+      <input type="checkbox" name="interest" id="art" value="Arts"></label>
+      <label for="art">Arts</label><br><br>
+      <label for="department">Preferred Department:</label><br>
+      <select id="department" name="department" required>
+      <option value="">-- Select Department --</option>
+      <option value="CSE">Computer Science & Engineering</option>
+      <option value="EEE">Electrical & Electronic Engineering</option>
+      <option value="BBA">Bachelor of Business Administration</option>
+      <option value="PHARMA">Bachelor of Pharmacy</option>
+      <option value="ENG">Bachelor of English</option>
+      <option value="LAW">Bachelor of Law</option>
+      </select><br><br>
+      <label for="document">Upload Required Documents:</label><br>
+      <input type="file" id="document" name="documents" required>
+      <br>
+    </fieldset>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+  </body>
+</html>
