@@ -1,60 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="light-mode">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PORTFOLIO OF A.S.M. SIUM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light-theme">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-mark">SM</span>
+        <span class="logo-text">A.S.M. Sium</span>
+      </div>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#" data-section="about">About</a></li>
-            <li><a href="#" data-section="projects">Projects</a></li>
-            <li><a href="#" data-section="contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle">Switch to Dark Mode</button>
-    </nav>
+      <nav class="nav">
+        <a href="#" class="nav-link active" data-section="about">About</a>
+        <a href="#" class="nav-link" data-section="projects">Projects</a>
+        <a href="#" class="nav-link" data-section="contact">Contact</a>
+      </nav>
 
-    <!-- Greeting -->
-    <div id="greeting">Hello!</div>
+      <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+    </header>
 
-    <!-- Sections -->
-    <section id="about">
+    <main class="main">
+      <section class="hero">
+        <p id="greeting" class="greeting">Welcome to my site!</p>
+        <p id="clock" class="clock"></p>
+      </section>
+
+      <section id="about" class="section active">
         <h2>About Me</h2>
-        <p>I am a passionate software developer looking for internship opportunities. I love building interactive web apps.</p>
-    </section>
+        <p class="tagline">
+          Passionate about technology and software development
+        </p>
 
-    <section id="projects" class="hidden">
-        <h2>Projects</h2>
-        <ul>
-            <li>Portfolio Website</li>
-            <li>Text Analysis Tool</li>
-            <li>Interactive Clock Widget</li>
+        <div class="grid two-col">
+          <div>
+            <h3>Summary</h3>
+            <p>
+             I’m passionate about technology and software development. I enjoy learning new tools, tackling challenges, and building impactful digital solutions.
+            </p>
+            <br />
+            <h3>Education</h3>
+            <p>
+              <strong>B.Sc. in Computer Science and Technology</strong><br />
+              American International University-Bangladesh (AIUB)<br />
+              CGPA: 3.57/4.00 (up to 10th Semester)
+            </p>
+          </div>
+
+          <div>
+            <h3>Skills</h3>
+            <ul class="pill-list">
+              <li>C++</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>MS Word</li>
+              <li>MS Excel</li>
+              <li>MS PowerPoint</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Lightroom</li>
+              <li>Adobe Premier Pro</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <h3>Awards & Certifications</h3><br>
+        <ul class="card-list">
+          <li>Completed The Course 'IT Essentials'</li>
+          <br />
+          <li>1st - International Photography Exibitiion</li>
         </ul>
-    </section>
+      </section>
 
-    <section id="contact" class="hidden">
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+          <h3>Age Calculator</h3>
+          <br />
+          <p class="project-meta">
+           HTML, CSS |
+            <a
+              href="https://github.com/SaddadSium/age-calculator"
+              class="demo-link"
+              >Project Demo</a
+            >
+          </p>
+          <ul>
+            <li>Displays age in years, months, and days.</li>
+            <li>Fully responsive and user-friendly design.</li>
+            <li>Features Select your date of birth using a calendar input.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h3>QR-Code-Generator</h3>
+          <br />
+          <p class="project-meta">
+            HTML, CSS |
+            <a
+              href="https://github.com/SaddadSium/QR-Code-Generator"
+              class="demo-link"
+              >Project Demo</a
+            >
+          </p>
+          <ul>
+            <li>Responsive design with a clean and modern UI.</li>
+            <li> Input field for users to enter text or a URL.</li>
+            <li>Button to trigger QR code generation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
         <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name">
+        <p class="tagline">
+          Reach out for collaborations or any interesting project.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:saddad748@gmail.com" target="_blank">✉ Gmail</a>
+          <a
+            href="https://www.linkedin.com/in/asmsium748/"target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/SaddadSium/" target="_blank">💻 GitHub</a>
+        </div>
+
+        <form id="contactForm" novalidate class="contact-form">
+          <div class="form-group">
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Your full name" />
             <small class="error" id="nameError"></small>
+          </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email">
+          <div class="form-group">
+            <label>Email</label>
+            <input id="email" type="text" placeholder="you@example.com" />
             <small class="error" id="emailError"></small>
+          </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message"></textarea>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="message" rows="4"></textarea>
             <small class="error" id="messageError"></small>
+          </div>
 
-            <button type="submit">Send</button>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p id="formSuccess" class="success-message"></p>
         </form>
-    </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 A.S.M. Sium, CSE-AIUB. All Rights Reserved</p>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
